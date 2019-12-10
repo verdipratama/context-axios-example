@@ -1,0 +1,71 @@
+body {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 960px;
+  color: #eee;
+  background: #282c34;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 40px;
+  margin-bottom: 40px;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+.fetch-all {
+  margin: 20px;
+}
+
+.fetch-all ul {
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.fetch-all li {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background: black;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.fetch-all li:hover {
+  opacity: 0.7;
+  /* text-decoration: line-through; */
+}
+
+.fetch-all .name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5em;
+}
+.fetch-all .description {
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.fetch-all .name {
+  border-radius: 5px 5px 0 0;
+}
+
+.empty {
+  margin: 20px;
+  text-align: center;
+}
