@@ -10,16 +10,19 @@ const FetchContextProvider = props => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios
-      .get('https://api.punkapi.com/v2/beers')
-      .then(res => {
-        setFetch(res.data.slice(1, 5));
-        setLoad(true);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoad(true);
-      });
+    const initialFetch = async () => {
+      axios
+        .get('https://api.punkapi.com/v2/beers')
+        .then(res => {
+          setFetch(res.data.slice(1, 5));
+          setLoad(true);
+        })
+        .catch(err => {
+          setError(err.message);
+          setLoad(true);
+        });
+    };
+    initialFetch();
   }, []);
 
   return (
